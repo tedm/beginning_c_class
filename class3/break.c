@@ -1,3 +1,4 @@
+// Program break.c
 // Program to calculate the sum of numbers (10 numbers max)
 // If the user enters a negative number, the loop terminates
 
@@ -13,7 +14,7 @@ int main() {
 
       // if the user enters a negative number, break the loop
       if (number < 0.0) {
-         break;
+         break; // Exit the loop when the if (condition) is no longer true
       }
 
       sum += number; // sum = sum + number;

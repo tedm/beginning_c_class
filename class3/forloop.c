@@ -1,24 +1,14 @@
-/* program forloop.c
-
-
-    for (initialization; condition; update) {
-        // code to be executed repeatedly
-    }
-
-
-for loop: An entry-controlled loop ideal for situations where the 
-number of iterations is known in advance. It includes initialization, 
-condition checking, and update expressions within its structure.
-*/
-
-
+// Program forloop.c
 #include <stdio.h>
 
 int main() {
 
-	for (int i =1; i <=10; i++)  	{
-		printf("hello, i is %d\n", i);
-	}
+	int maxtimes	= 10;
 
+	printf("hello will print %d times\n", maxtimes -1 );
+
+	for (int i = 1; i < maxtimes; i++)
+		printf("hello, i is %d\n", i);
 	return 0;
-}
+
+	}

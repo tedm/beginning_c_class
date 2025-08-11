@@ -12,3 +12,6 @@ int main() {
 
     return 0;
 }
+
+// if you entered more than 100 characters, you will only get 100 characters back due to the definition of MAX_SIZE
+
