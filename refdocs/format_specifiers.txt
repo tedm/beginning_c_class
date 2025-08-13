@@ -1,0 +1,20 @@
+google doc: https://docs.google.com/document/d/1WBIgF_4OtJW_lS7AdjFWJ2V0ZJfOViwNe2R3oKgc3_A/edit?usp=sharing
+
+Things to memorize for c - this list should cover the variables we work with in this class:
+Format Specifiers: These are special tokens beginning with % followed by a character (or sequence of characters) that dictates how data types are read from input or displayed as output. They tell the compiler how to interpret or format the corresponding value. For example:
+%d or %i: For signed decimal integers.
+%f: For floating-point numbers (single precision float).
+%c: For a single character.
+%s: For strings (character arrays).
+%p: For printing memory addresses (pointers).
+%x or %X: For unsigned hexadecimal integers (lowercase or uppercase respectively).
+%o: For unsigned octal integers.
+%u: For unsigned decimal integers.
+%ld or %li: For signed long integers.
+%lf: For double-precision floating-point numbers (double).
+%Lf: For extended precision floating-point numbers (long double).
+%lld or %lli: For signed long long integers.
+%llu: For unsigned long long integers.
+%n: This format specifier doesn't print any output. Instead, it stores the number of characters written so far by the printf() function into an integer variable.
+Printing a Literal Percent Sign: If you want to print the % character itself as part of a string, you need to use %% to escape it. For example, printf("The percentage is 50%%"); would output "The percentage is 50%". 
+In essence, format specifiers are crucial for managing input and output in C, enabling interaction with the user and proper display of various data types
