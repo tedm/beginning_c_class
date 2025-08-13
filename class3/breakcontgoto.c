@@ -2,7 +2,9 @@
 
 #include <stdio.h>
 
+
 int main() {
+
     for (int i = 0; i < 5; i++) {
         if (i == 3) {
             
@@ -23,7 +25,9 @@ int main() {
         printf("%d ", i);
     }
     printf("\n");
-    for (int i = 0; i < 5; i++) {
+  
+
+  for (int i = 0; i < 5; i++) {
         if (i == 3) {
             
             // Jump to the skip label when
@@ -34,8 +38,8 @@ int main() {
     }
     
 skip:
-    printf("\nJumped to the 'skip' label %s",
-    "when i equals 3.");
+    printf("\nJumped to the 'skip' label %s\n",
+    "when i equals 3.\n");
 
     return 0;
 }

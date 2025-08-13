@@ -5,7 +5,7 @@
 int main() {
   
   	// Day number
-    int day = 2;
+    int day = 4;
     
   	// Switch statement to print the name of the day
   	// on the basis of day number
