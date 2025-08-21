@@ -1,0 +1,51 @@
+A simple Makefile for a C project, assuming a single source file named main.c and an executable named program, is as follows:
+Code
+
+CC = gcc
+CFLAGS = -Wall -g
+
+program: main.o
+	$(CC) $(CFLAGS) main.o -o program
+
+main.o: main.c
+	$(CC) $(CFLAGS) -c main.c
+
+clean:
+	rm -f *.o program
+
+Explanation:
+
+CC = gcc:
+Defines a variable CC to represent the C compiler, in this case, GCC.
+
+CFLAGS = -Wall -g:
+Defines a variable CFLAGS for compiler flags. -Wall enables all standard warnings, and -g includes debugging information.
+
+program: main.o:
+This is a rule defining the program target. It states that program depends on main.o.
+
+$(CC) $(CFLAGS) main.o -o program:
+This is the recipe for building program. It uses the defined compiler and flags to link main.o into an 
+executable named program. Note: This line must be indented with a tab character, not spaces.
+
+main.o: main.c:
+This rule defines the main.o target. It states that main.o depends on main.c.
+
+$(CC) $(CFLAGS) -c main.c:
+This is the recipe for building main.o. It compiles main.c into an object file (.o) without linking. 
+Note: This line must be indented with a tab character.
+
+clean::
+This is a phony target named clean. It does not produce a file named clean.
+
+rm -f *.o program:
+This is the recipe for the clean target. It removes all object files (.o) and the program executable. Note: This line must be indented with a tab character.
+
+To use this Makefile:
+Save the content above in a file named Makefile (or makefile) in the same directory as your main.c file.
+
+Open a terminal in that directory.
+
+To compile your program, type make.
+
+To clean up generated files, type make clean.

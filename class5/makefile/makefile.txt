@@ -1,0 +1,19 @@
+Explanation of the makefile:
+
+We could manually compile this with these commands:
+
+gcc -c my_functions.c -o my_functions.o
+gcc -c another_functions.c -o another_functions.o
+gcc -c main.c -o main.o
+gcc my_functions.o another_functions.o main.o -o my_program
+./my_program
+
+
+by defining our variables for our gcc compiler, as well as arguments for make including:
+
+clean (will remove non source and object files)
+
+note that defailt is when we run make alone, it executes the gcc command with flags, creates
+object files, and links libraries to create the binary "my_program"
+
+
