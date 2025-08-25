@@ -6,6 +6,8 @@ TARGET = my_program
 
 all: $(TARGET)
 
+build: $(TARGET)
+
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS)
 
