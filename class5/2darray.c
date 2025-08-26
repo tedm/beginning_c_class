@@ -12,9 +12,6 @@ We could replace fruits below with:
 char name[25][100] and define 25 names, up to 99 characters
 */
 
-
-
-
 #include <stdio.h>
 
 int main() {

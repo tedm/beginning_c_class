@@ -1,0 +1,7 @@
+Beginning C Course outline doc link: 
+https://docs.google.com/document/d/1UUlAG3KVsNx-h0NtAX_PZA2xytDWXn3FQzSWJqu_aUw/edit?usp=sharing
+
+Guthub repo for class:
+https://github.com/tedm/beginning_c_class
+
+

@@ -1,0 +1,33 @@
+online C programming resources:
+
+https://www.geeksforgeeks.org/c/c-language-introduction/
+
+https://beej.us/guide/bgc/
+
+https://archive.org/details/c-programming-a-modern-approach-2nd-ed-c-89-c-99-king-by
+
+https://www.eskimo.com/~scs/cclass/notes/top.html
+
+https://inria.hal.science/hal-02383654
+
+https://publications.gbdirect.co.uk//c_book/
+
+https://en.cppreference.com/w/c/language.html
+
+https://www.learn-c.org/
+
+https://github.com/MTJailed/C-Programming-Books
+
+https://github.com/iczelia/C-Learning-Resources
+
+https://github.com/jflaherty/ptrtut13
+
+https://pll.harvard.edu/course/cs50-introduction-computer-science
+
+https://github.com/practical-tutorials/project-based-learning#cc
+
+https://www.c-language.org/
+
+If you come across a useful video or web resource, please let me now, and I will add it here.
+
+

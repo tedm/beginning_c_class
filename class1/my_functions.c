@@ -1,3 +1,5 @@
+// my_functions.c
+
 #include <stdio.h>
 #include "my_functions.h" // Include its own header for consistency
 

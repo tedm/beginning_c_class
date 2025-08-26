@@ -1,5 +1,8 @@
 // memcpyptr2.c
 
+// note: memcpy() which is declared in the string.h header has the following prototype:
+// void *memcpy(void *dest, const void *src, size_t n);
+
 
 #include <stdio.h>
 #include <string.h> // For memcpy()

@@ -1,3 +1,5 @@
+// main.c
+
 #include <stdio.h>
 #include "my_functions.h" // Include the header file for function declarations
 

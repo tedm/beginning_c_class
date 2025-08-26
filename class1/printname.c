@@ -1,3 +1,5 @@
+// printname.c
+
 #include <stdio.h> // Required for printf() and fgets() functions
 
 int main() {
