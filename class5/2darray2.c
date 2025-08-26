@@ -1,4 +1,4 @@
-// 2darray.c
+// 2darray2.c - prompt for input
 // array of strings or a 2D character array, simplay an array of arrays
 
 /* in this case: char fruits[3][10] ...
@@ -19,13 +19,20 @@ char name[25][100] and define 25 names, up to 99 characters
 
 int main() {
     // Declaring and initializing an array of strings
-    char fruits[3][10] = {"Apple", "Banana", "Orange"};
+    	char fruits[3][10];
 
+	for (int i = 0; i < 3; i++) {
+
+		printf("Enter 3 Fruit names:\n");
+		scanf("%99s",fruits[i]);
+	}
+	
     // Printing the array of strings
-    printf("Fruits:\n");
-    for (int i = 0; i < 3; i++) {
-        printf("%s\n", fruits[i]);
-    }
+    	printf("\n\n You entered:\n");
+    
+		for (int i = 0; i < 3; i++) {
+        	printf("%s\n", fruits[i]);
+    	}
 
     return 0;
 }
