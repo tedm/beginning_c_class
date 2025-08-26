@@ -1,8 +1,9 @@
+// ccvalidate.c
 // cc format validation
 
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h> // For isdigit()
+#include <ctype.h> // For isdigit() - prototype: int isdigit(int arg);
 
 // Function to validate a credit card number using Luhn's algorithm
 int isValidLuhn(char cardNumber[]) {

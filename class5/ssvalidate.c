@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h> // For isdigit()
+// isdigit() prototype is: int isdigit(int arg);
 
 int main() {
     char ssn[12]; // 9 digits + 2 hyphens + null terminator
