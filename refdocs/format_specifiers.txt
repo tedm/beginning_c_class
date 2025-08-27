@@ -5,7 +5,7 @@ Format Specifiers: These are special tokens beginning with % followed by a chara
 %d or %i: For signed decimal integers.
 %f: For floating-point numbers (single precision float).
 %c: For a single character.
-%s: For strings (character arrays).
+%s: For strings (character arrays). [updated: note %99s format specifier limits max length to 99 chars]
 %p: For printing memory addresses (pointers).
 %x or %X: For unsigned hexadecimal integers (lowercase or uppercase respectively).
 %o: For unsigned octal integers.
