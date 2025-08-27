@@ -24,11 +24,11 @@ int main() {
 	for (int i = 0; i < 3; i++) {
 
 		printf("Enter 3 Fruit names:\n");
-		scanf("%99s",fruits[i]);
+		scanf("%9s",fruits[i]); // %9s means to accept 9 chars
 	}
 	
     // Printing the array of strings
-    	printf("\n\n You entered:\n");
+    	printf("\n\nYou entered:\n");
     
 		for (int i = 0; i < 3; i++) {
         	printf("%s\n", fruits[i]);

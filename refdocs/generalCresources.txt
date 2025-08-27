@@ -1,5 +1,7 @@
 online C programming resources:
 
+https://www.w3schools.com/c/
+
 https://www.geeksforgeeks.org/c/c-language-introduction/
 
 https://beej.us/guide/bgc/
@@ -27,6 +29,8 @@ https://pll.harvard.edu/course/cs50-introduction-computer-science
 https://github.com/practical-tutorials/project-based-learning#cc
 
 https://www.c-language.org/
+
+https://www.andreinc.net/2021/10/02/implementing-hash-tables-in-c-part-1
 
 If you come across a useful video or web resource, please let me now, and I will add it here.
 
