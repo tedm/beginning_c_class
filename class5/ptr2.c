@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main() {
-	int num = 5;
+	static int num = 5;
 	int *ptr = &num;
 
 	printf("enter an integer: ");
