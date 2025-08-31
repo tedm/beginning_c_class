@@ -1,4 +1,5 @@
 // subt2ptrs.c
+// study this program with the subt2ptrsB.c program which uses ptrdiff_t from <stddef.h>
 
 
 #include <stdio.h>
