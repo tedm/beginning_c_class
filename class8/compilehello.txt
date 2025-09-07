@@ -1,0 +1,12 @@
+to compile the hello.asm file
+
+apt install nasm
+
+compile with:
+
+nasm -f elf64 -o hello.o hello.asm
+
+link with:
+
+ld -o hello hello.o
+
