@@ -5,6 +5,8 @@ Ingredients for the Sandwich Shop programs
 #ifndef INGREDIENTS_H_
 #define INGREDIENTS_H_
 
+#include <inttypes.h>
+
 //1 or 0x01
 #define BACON "bacon"
 #define BACON_FLAG 0b00000001
@@ -37,9 +39,12 @@ Ingredients for the Sandwich Shop programs
 #define RANCH "ranch"
 #define RANCH_FLAG 0b10000000
 
-extern int MatchIngredient(char *arg);
+int MatchIngredient(char *arg);
+void ListExcludes(uint8_t toppings, char *buffer);
 extern const char *INGREDIENT_LIST[];
+extern const int INGREDIENT_FLAGS[];
 #define INGREDIENT_LIST_SIZE 8
-#define INGREDIENT_MAX 10
+#define INGREDIENT_INVENTORY_MAX 10
+#define ALL_INGREDIENTS 0xff
 
 #endif
