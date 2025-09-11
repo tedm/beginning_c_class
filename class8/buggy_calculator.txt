@@ -1,0 +1,115 @@
+This example C code, buggy_calculator.c, demonstrates how to use gdb to debug 
+a program with common errors like an infinite loop and incorrect variable 
+assignment. Descriptive comments are included directly in the code to explain 
+how specific gdb commands can be used to pinpoint and fix the bugs.
+
+# The `-g` flag adds debugging symbols.
+# The `-o` flag specifies the output executable name.
+
+to compile the buggy_calculator.c program:
+
+$gcc -g -o buggy_calculator buggy_calculator.c
+
+Start gdb with:
+
+# Start gdb with the compiled executable.
+$gdb buggy_calculator
+
+interactive gdb session:
+
+The following is a step-by-step transcript of a gdb session, with comments 
+explaining each command.
+
+# Start the debugging session
+(gdb) # First, use `break` to set a breakpoint at the `main` function.
+(gdb) break main
+
+# Run the program. It will stop at the `main` function.
+(gdb) run
+# Output: Thread 1 hit Breakpoint 1, main () at buggy_calculator.c:23
+# The program is paused at line 23.
+
+# Use `list` to show the surrounding code.
+(gdb) list
+# Output:
+# 21  int main() {
+# 22      int result = 0;
+# 23      result = add(5, 3);
+# 24      printf("Result of addition: %d\n", result);
+# 25      loop_function();
+# ...
+
+# Use `next` to execute the current line (line 23) but step *over* the function call.
+(gdb) next
+# GDB executes the `add` function, and you see the result.
+
+# Use `print` (or `p`) to inspect the value of the `result` variable.
+(gdb) print result
+# Output: $1 = 0
+# This shows the `result` is 0, which is incorrect. The bug is in `add()`.
+
+# Set another breakpoint inside the `add` function to investigate further.
+(gdb) break add
+
+# Rerun the program to hit the new breakpoint.
+(gdb) run
+# Output: Thread 1 hit Breakpoint 2, add (a=5, b=3) at buggy_calculator.c:6
+
+# List the code to see where we are.
+(gdb) list
+# Output:
+# 4   int add(int a, int b) {
+# 5       int sum;
+# 6       sum = a + b;
+# 7       return 0;
+# 8   }
+# We can see the bug on line 7 immediately.
+
+# Use `print` to check the `sum` variable, even though the return hasn't happened yet.
+(gdb) print sum
+# Output: $2 = 8
+# The sum was correctly calculated. The error is in the `return` statement.
+
+# To inspect the infinite loop, set a watchpoint on the loop counter.
+(gdb) break main
+(gdb) run
+(gdb) next # execute the 'add' call
+(gdb) next # execute the 'printf' call
+(gdb) step # now step *into* the `loop_function`
+
+# Set a watchpoint on the loop variable `i`.
+(gdb) watch i
+# Output: Hardware watchpoint 3: i
+
+# Continue execution. GDB will stop whenever `i` changes.
+(gdb) continue
+# Output: Hardware watchpoint 3: i
+# Old value = 0
+# New value = 1
+# loop_function () at buggy_calculator.c:16
+# 16        i++;
+# Continue several times, watching `i` increment.
+
+# Eventually, GDB stops and shows the loop finishes. The print statements help see the logic error.
+# The loop runs for `i=0` to `i=10`, so 11 times. The condition should be `i < 10`.
+
+# Use `backtrace` to see the function call stack.
+# Let's imagine the program crashed. You'd get a GDB prompt.
+# Run the program until it completes or hits an error.
+(gdb) run
+# ... program output ...
+# You might get a segfault if there was a memory error.
+# Assume you are at a crash point or stopped at a breakpoint.
+
+# Use `backtrace` to see the call history.
+(gdb) backtrace
+# Output:
+# #0  loop_function () at buggy_calculator.c:20
+# #1  0x000055555555474c in main () at buggy_calculator.c:25
+# #2  0x00007ffff7de5d90 in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+# The output clearly shows `main` called `loop_function`, confirming the call stack.
+
+# Quit GDB.
+(gdb) quit
+
+
