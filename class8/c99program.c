@@ -5,6 +5,8 @@ Note that old c90 standard also doesn't like // for comments!
 
 This will compile with gcc -std=c90 <program.c> -o executablename
 
+note that double slashes for comments wouldn't work in c90 either!
+
 */
 
 
