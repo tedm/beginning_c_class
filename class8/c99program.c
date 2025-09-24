@@ -1,4 +1,4 @@
-/*
+/* 
  c99program.c
 
 Note that old c90 standard also doesn't like // for comments!
@@ -21,11 +21,13 @@ int main() {
 would allow this to compile under -std=c11 or -stdc90
 */
 
-    for (int i = 0; i < 5; i++) {
+  
+    int i;
+    for (i = 0; i < 5; i++) {
 
 /* remove the 'int' above to verify it won't compile in C99
 */
-
+        
         printf("Iteration %d\n", i);
     }
 

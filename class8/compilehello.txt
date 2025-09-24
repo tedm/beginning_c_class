@@ -10,3 +10,7 @@ link with:
 
 ld -o hello hello.o
 
+or as one line:
+
+nasm -felf64 hello.asm && ld hello.o && ./a.out
+
